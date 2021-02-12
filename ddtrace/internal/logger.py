@@ -2,8 +2,8 @@ import collections
 import logging
 import os
 
-from ..utils.formats import get_env
 from ..utils.deprecation import deprecation
+from ..utils.formats import get_env
 
 
 def get_logger(name):
@@ -110,7 +110,10 @@ class DDLogger(logging.Logger):
                     version="1.0.0",
                 )
 
-        self.rate_limit = rate_limit is not None and int(rate_limit) or 60
+        if rate_limit is not None:
+            self.rate_limit = int(rate_limit)
+        else:
+            self.rate_limit = 60
 
     def handle(self, record):
         """

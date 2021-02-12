@@ -1,0 +1,5 @@
+---
+fixes:
+  - |
+    Deprecate the (DD/DATADOG)_LOGGING_RATE_LIMIT variable in favour of the
+    standard DD_TRACE_LOGGING_RATE for configuring the logging rate limit.
