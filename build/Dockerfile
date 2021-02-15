@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 RUN apt-get update && apt-get install -y automake cmake git libtool make build-essential software-properties-common \
     && add-apt-repository ppa:deadsnakes/ppa \
     && apt-get install -y python3 python3-pip python3-dev \
