@@ -10,6 +10,6 @@ RUN apt-get update && apt-get install -y autoconf automake curl wget cmake git l
 
 RUN echo $CC
 
-RUN cd ddctrace && python3 -m pip install cython && python3 setup.py bdist_wheel
+RUN cd dd-trace-py && python3 -m pip install cython && python3 setup.py bdist_wheel
 
 RUN uname -m
